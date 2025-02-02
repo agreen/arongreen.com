@@ -1,0 +1,24 @@
+/* m-theme-custom.css - Minimal customization using your color palette */
+:root {
+    /* Basics */
+    --background-color: #ffffff;  /* Page background color */
+    --color: #000000;  /* Main text color */
+    --line-color: #d3d3d3;  /* Divider lines */
+    --link-color: #006400;  /* Dark green links */
+    --link-active-color: #004d00;  /* Darker green on hover */
+
+    /* Header */
+    --header-link-color: #006400;  /* Dark green for header links */
+    --header-link-active-color: #004d00;  /* Active link hover */
+
+    /* Footer */
+    --footer-color: #808080;  /* Medium grey */
+    --footer-background-color: #d3d3d3;  /* Light grey footer background */
+
+    /* Primary accents */
+    --primary-color: #006400;  /* Primary accent color */
+    --primary-link-active-color: #004d00;  /* Active state */
+
+    /* Article */
+    --article-heading-color: #006400;  /* Green headings */
+}
