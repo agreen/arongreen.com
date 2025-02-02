@@ -1,1 +1,4 @@
-output/\n.cache/\n*.pyc\n__pycache__/
+output/
+.cache/
+*.pyc
+__pycache__/
