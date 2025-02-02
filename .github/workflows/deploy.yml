@@ -28,6 +28,9 @@ jobs:
       run: |
         pelican content
 
+    - name: Create .nojekyll file to disable Jekyll processing
+      run: touch output/.nojekyll
+
     - name: Deploy to GitHub Pages
       run: |
         ghp-import output
