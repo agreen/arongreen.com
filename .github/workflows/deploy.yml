@@ -31,6 +31,9 @@ jobs:
     - name: Create .nojekyll file to disable Jekyll processing
       run: touch output/.nojekyll
 
+    - name: Add CNAME file for custom domain
+      run: echo "arongreen.com" > output/CNAME
+
     - name: Deploy to GitHub Pages
       run: |
         ghp-import output
