@@ -1,0 +1,34 @@
+name: Deploy to GitHub Pages
+
+on:
+  push:
+    branches:
+      - master  # Change this to your main branch if necessary
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v3
+      with:
+        submodules: recursive  # Initialize and update submodules
+
+    - name: Set up Python environment
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.x'
+
+    - name: Install dependencies
+      run: |
+        pip install pelican[markdown] ghp-import
+
+    - name: Build the site
+      run: |
+        pelican content
+
+    - name: Deploy to GitHub Pages
+      run: |
+        ghp-import output
+        git push origin gh-pages --force
